@@ -1,0 +1,174 @@
+:root {
+    --bg-color: hsl(30, 38%, 92%);
+    --component-color: hsl(158, 36%, 37%);
+    --white: hsl(0, 0%, 100%);
+    --paragraph: hsl(228, 12%, 48%);
+    --title: hsl(212, 21%, 14%);
+    --hover-component-color: hsl(158, 54%, 25%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+main {
+    width: 100%;
+}
+
+.card {
+    min-width: 600px;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.left {
+    width: 50%;
+    background-image: url(/images/image-product-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px ;
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 35px 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.category {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--paragraph);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 38px;
+    color: var(--title);
+}
+
+.description {
+    width: 85%;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--paragraph);
+}
+
+.price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px
+}
+
+.price-update {
+    color: var(--component-color);
+    font-size: 36px;
+}
+
+.price-previous {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: var(--paragraph);
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-weight: 700;
+    background-color: var(--component-color);
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--hover-component-color);
+}
+
+button img {
+    margin: 7px;
+}
+
+@media only screen and (min-width:641px) and (max-width:768px) {
+    .card {
+        max-width: 600px;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .card {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        min-width: auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .left {
+        width: 100%;
+        height: 350px;
+        background-image: url("/images/image-product-mobile.jpg");
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .right {
+        width: 100%;
+        row-gap:12px;
+        padding: 25px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .category {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .description {
+        width: 95%;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        line-height: 1.7;
+        font-size: 12px;
+    }
+
+    button {
+        margin: 10px;
+    }
+}
